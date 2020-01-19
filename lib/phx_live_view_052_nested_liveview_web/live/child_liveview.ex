@@ -8,6 +8,11 @@ defmodule PhxLiveView052NestedLiveviewWeb.ChildLive do
   end
 
   def mount(_assigns, socket) do
+    IO.inspect("Hey! I'm the child")
+
+    # doesn't get raised
+    raise "error in child_liveview.ex"
+
     {:ok, socket}
   end
 end
